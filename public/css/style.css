@@ -1,0 +1,104 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:1.1rem;
+	line-height:1.6em;
+    width:100%;
+    margin:auto;
+     /* 90% */
+}
+
+.wrapper{
+    display: grid;
+    height: 100vh;
+}
+
+.item{
+    border-top: 2px solid white;
+}
+
+.header{
+    display: grid;
+    grid-gap: 10px;
+    text-align: center;
+    color: white;
+    grid-template-columns: repeat(6,1fr);
+    background-color: #b0003a;
+    grid-auto-rows: minmax(50px,auto);
+}
+
+.content{
+    display: grid;
+    /* grid-gap:10px; */
+    text-align: center;
+    grid-template-columns: 1fr 5fr;
+    grid-auto-rows: minmax(793px,auto);
+}
+
+#action-bar{
+    background-color: #b0003a;
+    text-align: center;
+    color: white;
+    padding-top: 1rem;
+}
+
+#content-bar{
+    background-color: #f5f9fc;
+    text-align: center; 
+}
+
+#section-bar{
+    padding:1rem;
+}
+
+hr{
+    background:white;
+}
+
+.h-section{
+    margin-top: 2rem;
+}
+
+.check-col-5{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    text-align:center;
+    font-size:0.9rem;
+}
+
+.check-col-4{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    text-align:center;
+    font-size:0.9rem;
+}
+
+.check-col-3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align:center;
+    font-size:0.9rem;
+}
+
+.check-col-2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align:center;
+    font-size:0.9rem;
+}
+
+.check-col-1{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align:center;
+    font-size:0.9rem;
+}
+
+.col{
+    border: 1px solid black;
+    border-right: none;
+    border-left: none
+}
+
+th, td {
+    background-color: white;
+  }

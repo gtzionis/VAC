@@ -1,0 +1,48 @@
+<div class="modal fade" id="excelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+             <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Creation of Charts using Excel data</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" >
+                    <div class="check-col-3">
+                        <div><input type="file" class="input-group-text" id="input"></div>
+                        <div><p>Excels
+                            <select id="excelFiles" class="border rounded ">
+                                
+                            </select></p>
+                        </div>
+                        <div>
+                            <p>Chart
+                                <select id="chartExcel" class="border rounded">
+                                    <option value="bar" selected="">Bar</option>
+                                    <option value="line">Line</option>
+                                    <option value="horizontalBar">Horizontal Bar</option>
+                                    <option value="pie">Pie</option>
+                                    <option value="doughnut">Doughnut</option>
+                                    <option value="radar">Radar</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div></div>
+                        <div><button type="button" class="btn btn-outline-secondary btn-sm disabled ml-3" id="deleteExcel">Delete Excel</button></div>
+                    </div>
+                    <p>Attributes
+                    <div id="excelAttributes" class="check-col-3" > 
+
+                    </div></p>
+                    <hr>
+                    <div id="excelValues"> 
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="createChartExcel" class="btn btn-primary" data-dismiss="modal">Create</button>
+                    <button type="button" class="btn btn-secondary" id="wrongClose" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+</div>

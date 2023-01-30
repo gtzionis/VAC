@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css" />
+
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.dataTables.css">
+</head>
+<body>
+    <div class="wrapper">
+       <div class="header">
+           <div>
+               <h1 class="display-4 h-section">Welcome</h1>
+           </div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div>
+               <h1 class="display-4">Teacher Panel</h1>
+           </div>
+       </div>
+       <div class="content item">
+            <div id="action-bar">
+                <p>Classroom:
+                    <select id="classrooms" class="border rounded">
+        
+                    </select>
+                </p>
+                <button type="button" class="btn btn-light" id="createClass">Create Classroom</button>
+                <hr>
+                <p>Lesson ID:
+                    <select id="lessons" class="border rounded">
+                        <option value="1" selected="">L1</option>
+                        <option value="2">L2</option>
+                    </select>
+                </p>
+                <p>Date: <input type="text" id="datepicker"></p>
+                <button type="button" id="assigmentLCC" class="btn btn-light">Submit</button>   
+                <hr>
+                <a href="{{page}}" class="button h-section" style="color: white;"><h5>Visual Analytics</h5></a>
+            </div>
+            <div id="section-bar">
+               <div id="tables">
+               
+               </div>
+               <div id="buttonsFilters">
+
+               </div>    
+            </div>
+       </div>
+    </div>
+    
+     {{>classroomModal}}
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/jquery-ui-timepicker-addon.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="assets/js/jquery.dataTables.js"></script>
+
+    <script src="js/panel/classroom.js"></script>
+    <script src="js/panel/LIDate.js"></script>
+    <script src="js/panel/maniGoups.js"></script>
+    <script src="js/panel/GroupTCN.js"></script>
+
+</body>
+</html>

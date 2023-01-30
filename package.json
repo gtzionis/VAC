@@ -1,0 +1,31 @@
+{
+  "name": "node-va",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rdfjs/data-model": "^1.3.4",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "html-to-docx": "^1.6.4",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.13.0",
+    "python-shell": "^2.0.3",
+    "rdf-builder": "^2.0.0",
+    "rdf-parse": "^1.9.1",
+    "rdflib": "^2.2.12",
+    "streamify-string": "^1.0.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

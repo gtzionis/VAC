@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">-->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+	<link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.dataTables.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.16.8/dist/xlsx.full.min.js"
+    integrity="sha256-Ic7HP804IrYks4vUqX1trFF1Nr33RjONeJESZnYxsOY=" crossorigin="anonymous"></script>
+
+    <script src="lib/Chart.min.js"></script>
+
+    <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
+
+    <script src="lib/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.min.js" integrity="sha512-WaHZ16+n6qSSVxDii8MZGmFlnro3iZdJa/hb1XKraoMx1/HVILhLdAX22ypk4lT/8+t4XMYcjzCDwfvZ1CAJgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src='assets/js/simple-statistics.min.js'></script>
+    <script src="assets/js/underscore-umd-min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
+
+    
+</head>
+
+<div class="main">
+        <div class="main-sec">
+            <div class="menu">
+                <h1 class="display-4 h-section">Welcome</h1>
+                <hr>
+                <h5 class="h-section">Personal Information</h5>
+                    <div class="check-col-2" style="font-size:1.1rem;">
+                        <p>Class
+                            <select id="class-sel" class="border rounded">
+                                <option value="none" selected="">-</option>
+                            </select>
+                        </p>
+                        <p>TCN
+                            <select id="tcn-sel" class="border rounded">
+                                <option value="none" selected="">-</option>
+                            </select>
+                        </p>
+                    </div>
+                    <button id="search-tcn" class="btn btn-primary" type="button" >Search</button>
+                <hr>
+                <h5 class="h-section">Welcome Charts</h5>
+                <div class="btn-group buttons" role="group">
+                    <button type="button" id="tcn-g-p" class="btn btn-primary">Creation of Charts</button> 
+                    <!--<button id="createChart" class="btn btn-primary" type="button" >Create</button>-->
+                </div>
+                <hr>
+                <h5 class="h-section">Excel Charts</h5>
+                <button id="excelBtn" class="btn btn-primary" type="button" >Creation of Charts</button>   
+                <hr>
+                  <h5 class="h-section">Dashboards</h5>
+                 <select id="dashboards" class="border rounded mb-2">
+                    <option selected="" value="none">-</option>
+                </select>
+                 <div class="btn-group buttons" role="group">
+                    <button id="save" class="btn btn-primary" type="button" >Create</button>
+                    <button id="edit" class="btn btn-primary disabled" type="button" >Update</button>
+                    <button id="delete" class="btn btn-primary disabled" type="button" >Delete</button>
+                </div>
+                <hr>
+                <h5 class="h-section">Manual</h5>
+                <button id="manual-btn" class="btn btn-primary" type="button" >Open</button>
+                <hr>
+                <h5 class="h-section">Analytical report</h5>
+                <button id="reportBtn" class="btn btn-primary" type="button" >Export charts</button>
+                <!--<a id="download"
+                    download="ChartImage.jpg" 
+                    href=""
+                    class="btn btn-primary bg-flat-color-1"
+                    title="Descargar Gráfico">
+                    <i class="fa fa-download"></i>
+                </a>  -->  
+                <hr>
+                <a href="{{page}}" class="button h-section" style="color: white;"><h5>Teacher Panel</h5></a>
+            </div>
+            <div class="area-chart">
+                <div class="lists" id="area-chart-column">
+                    <div class="col list" id="col1"></div>
+                    <div class="col list" id="col2"></div>
+                    <div class="col list" id="col3"></div>
+                    <div class="col shadow rounded" style="border: 1px solid #ccc;">
+                        <div class="list rounded p-2" id="searchCol">
+                          <div class="list-item text-light shadow" draggable="false">Temporary Graphs</div>
+                         <!-- <canvas class="chart" draggable="true" id="lineChart" width="200px" height="200px"></canvas>
+                          <canvas class="chart" draggable="true" id="barChart" width="200px" height="200px"></canvas>
+                          <canvas class="chart" draggable="true" id="radarChart" width="200px" height="200px"></canvas>-->
+                         </div>
+                       </div>
+                </div>
+                <div class="footer">
+                    <div class="container my-auto">
+                         <div class="text-center my-auto copyright"><span>Copyright © WELCOME 2020</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+            {{>manual}}
+            
+            {{>filterModal}}
+            {{>modeModal}}
+            {{>newDashModal}}
+            {{>deleteModal}}
+            {{>editModal}}
+            {{>tcnModal}}
+            {{>tcnFilterModal}}
+            {{>modeTCNModal}}
+            {{>wrongChoise}}
+            {{>excelPartial}}
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+
+    <script src="js/functions/manual.js"></script>
+
+    <script src="js/functions/chartCalculations.js"></script>
+    <script src="js/functions/globalFunctions.js"></script>
+    <script src="js/charts/move.js"></script>
+    <script src="js/modals/modalFilter.js"></script>
+    <script src="js/charts/editLL.js"></script>
+    <script src="js/charts/calculationObj.js"></script>
+    <script src="js/charts/createChart.js"></script>
+    <script src="js/modals/editModal.js"></script>
+    <script src="js/modals/save.js"></script>
+	<script src="js/charts/chartProduction.js"></script>
+    <script src="js/functions/selection.js"></script>
+    <script src="js/modals/deleteMod.js"></script>
+    <!--<script src="js/modals/mode.js"></script>-->
+    <script src="js/modals/excelModal.js"></script>
+    <script src="js/functions/analyticalReport.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="assets/js/jquery.dataTables.js"></script>
+
+    <script src="js/charts/studentCharts.js"></script>
+    <script src="js/modals/tcn.js"></script>
+    <script src="js/xlsx_reader.js"></script>
+    <script src="js/modals/modeTCN.js"></script>
+    
+</body>
+
+</html>

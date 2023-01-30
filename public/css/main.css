@@ -1,0 +1,192 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:1.1rem;
+	line-height:1.6em;
+    width:100%;
+    margin:auto;
+     /* 90% */
+}
+
+.main{
+    display: grid;
+    height: 100vh;
+}
+
+.h-section{
+    margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+hr{
+    background:white;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.check-col-3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align:center;
+    font-size:0.9rem;
+}
+
+.check-col-2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align:center;
+    font-size:0.9rem;
+}
+
+.check-col-1{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align:center;
+    font-size:0.9rem;
+}
+
+.main-sec{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-auto-rows: minmax(800px, auto); 
+    text-align:center;
+    background-color:white;
+}
+
+.menu{
+    background-color:  #3b63c9;
+    color:white; 
+}
+
+
+/*
+.area-chart{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(800px, auto); 
+    text-align:center;
+    background-color: bisque;
+}
+*/
+.area-chart{
+    display: grid;
+    grid-gap: 0.8rem;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto); 
+    text-align:center;
+    background-color:#f5f9fc;
+    color:#f5f9fc;
+    padding-top: 0.8rem;
+    margin-right: 0.8rem;
+
+}
+
+.footer{
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: 1fr;
+    text-align:center;
+    background-color: white;
+}
+
+
+
+.col{
+    /*border: 1px solid black;*/
+}
+
+
+.lists {
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	width: 100%;
+	height: auto;
+    text-align:center;
+	grid-auto-rows: minmax(700px, auto); 
+}
+
+.lists .list {
+	display: flex;
+	flex-flow: column;
+	flex: 1;
+
+	width: 100%;
+	min-width: 220px;
+	max-width: 380px;
+	height: 100%;
+	min-height: 800px;
+	transition: all 0.2s linear;
+}
+
+
+.lists .list .list-item {
+	background-color: #3b63c9;
+	border-radius: 8px;
+	/*padding: 5px 10px; margin: 4px 0px;*/
+	text-align: center;
+}
+
+.chart{
+	background-color: #f5f9fc;
+	border-radius: 8px;
+	text-align: center;
+	border: 1px solid #3b63c9;
+    padding: 5px 10px;
+    margin: 4px 0px;
+}
+
+
+@media(max-width:1300px){
+    .col{
+        grid-column: span 2;
+	}
+	.lists .list{
+		min-height: 200px;
+	}
+    .lists{
+        grid-auto-rows: minmax(200px, auto); 
+    }    
+}
+
+@media(max-width:700px){
+    .col{
+        grid-column: 1/-1; 
+	}
+	.lists .list{
+		min-height: 200px;
+	}
+    .lists{
+        grid-auto-rows: minmax(200px, auto); 
+    }
+}
+
+.modal-body{
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+
+
+#accordion .ui-accordion-content {font-family:Arial, Helvetica;border-style: none;}
+#accordion .ui-accordion-header { background-color:#4E73DF;font-family:Arial, Helvetica;border-style: none;color: white;font-weight: bold}
+
+#accordion1 .ui-accordion-content {font-family:Arial, Helvetica;border-style: none;}
+#accordion1 .ui-accordion-header { background-color:#4E73DF;font-family:Arial, Helvetica;border-style: none;color: white;font-weight: bold}
+
+#accordion2 .ui-accordion-content {font-family:Arial, Helvetica;border-style: none;}
+#accordion2 .ui-accordion-header { background-color:#4E73DF;font-family:Arial, Helvetica;border-style: none;color: white;font-weight: bold}
+
+#accordion3 .ui-accordion-content {font-family:Arial, Helvetica;border-style: none;}
+#accordion3 .ui-accordion-header { background-color:#4E73DF;font-family:Arial, Helvetica;border-style: none;color: white;font-weight: bold}
+
+#accordion4 .ui-accordion-content {font-family:Arial, Helvetica;border-style: none;}
+#accordion4 .ui-accordion-header { background-color:#4E73DF;font-family:Arial, Helvetica;border-style: none;color: white;font-weight: bold}
+
+#m1 .ui-accordion-content {font-family:Arial, Helvetica;border-style: none;}
+#m1 .ui-accordion-header { background-color:#4E73DF;font-family:Arial, Helvetica;border-style: none;color: white;font-weight: bold}
